@@ -1,0 +1,2 @@
+LARAVEL_URL = 'https://www.linkedin.com/jobs/search/?currentJobId=3705471442&f_TPR=r86400&geoId=92000000&keywords=laravel%20developer&location=Worldwide&refresh=true'
+DJANGO_URL = 'https://www.linkedin.com/jobs/search/?currentJobId=3705471442&f_TPR=r86400&geoId=92000000&keywords=django%20developer&location=Worldwide&refresh=true'
