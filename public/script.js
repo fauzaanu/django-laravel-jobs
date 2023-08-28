@@ -6,8 +6,18 @@ fetch("data.json")
       let tr = document.createElement("tr");
       tr.innerHTML = `
                 <td class="border px-4 py-2">${item.date}</td>
-                <td class="border px-4 py-2">${item.jobs.DJANGO_URL}</td>
-                <td class="border px-4 py-2">${item.jobs.LARAVEL_URL}</td>
+                <td class="border px-4 py-2">
+                  <a href="public/imgs/${item.imgs.DJANGO_URL}.png" target="_blank">
+                    ${item.jobs.DJANGO_URL}
+                    <img src="public/imgs/${item.imgs.DJANGO_URL}.png" width="100" />
+                  </a>
+                </td>
+                <td class="border px-4 py-2">
+                  <a href="public/imgs/${item.imgs.LARAVEL_URL}.png" target="_blank">
+                    ${item.jobs.LARAVEL_URL}
+                    <img src="public/imgs/${item.imgs.LARAVEL_URL}.png" width="100" />
+                  </a>
+                </td>
             `;
       tbody.appendChild(tr);
     });
