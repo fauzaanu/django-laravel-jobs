@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Job Comparison - Django vs Laravel</title>
-    <meta
-      name="description"
-      content="A comparison of job postings for Django and Laravel."
-    />
-    <meta
-      name="keywords"
-      content="Job Comparison, Django, Laravel, Programming Jobs"
-    />
-    <meta name="author" content="Fauzaan Gasim" />
-    <meta property="og:title" content="Job Comparison - Django vs Laravel" />
-    <meta
-      property="og:description"
-      content="A comparison of job postings for Django and Laravel."
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl font-bold my-5">
-        Job Comparison - Django vs Laravel
-      </h2>
-      <table id="data" class="table-auto w-full">
-        <thead>
-          <tr>
-            <th class="border px-4 py-2">Date</th>
-            <th class="border px-4 py-2">Django Jobs</th>
-            <th class="border px-4 py-2">Laravel Jobs</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+
+<head>
+  <title>Job Comparison - Django vs Laravel</title>
+  <meta name="description" content="A comparison of job postings for Django and Laravel." />
+  <meta name="keywords" content="Job Comparison, Django, Laravel, Programming Jobs" />
+  <meta name="author" content="Fauzaan Gasim" />
+  <meta property="og:title" content="Job Comparison - Django vs Laravel" />
+  <meta property="og:description" content="A comparison of job postings for Django and Laravel." />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-900 text-white">
+  <div class="container mx-auto px-4">
+    <h1 class="text-2xl font-bold my-5">
+      Job Comparison - Django vs Laravel
+    </h1>
+    <div class="py-5">
+      <p>
+        Data is collected every 24H unless being updated manually while improving the script.
+      </p>
+      <p>
+        Data is from linkedin.com and now a screenshot of the search results are included for more transparency.
+      </p>
     </div>
-    <script src="script.js"></script>
-  </body>
+    <table id="data" class="table-auto w-full">
+      <thead>
+        <tr>
+          <th class="border px-4 py-2 w-1/4 bg-yellow-500">Time</th>
+          <th class="border px-4 py-2 bg-green-800">Django</th>
+          <th class="border px-4 py-2 bg-red-500">Laravel</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>
