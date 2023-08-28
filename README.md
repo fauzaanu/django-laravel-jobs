@@ -13,6 +13,6 @@ playwright
 
 ## TO DO
 
--[ ] Add a github like graph to show the trend
+- [x] Add a github like graph to show the trend
 
--[ ] Add images of linkedin for transparency
+- [x] Add images of linkedin for transparency
