@@ -26,14 +26,14 @@ def main():
         new_data['imgs'][key] = img_key
 
         browser.close()
-  with open('public/data.json', 'r+') as f:
+  with open('public/data.json', 'r') as f:
     if os.stat('public/data.json').st_size != 0:
         data = json.load(f)
-        data.append(new_data)
     else:
-        data = [new_data]
-    f.seek(0)
-    json.dump(data, f, separators=(',', ':'))  # Add separators argument
+        data = []
+  data.append(new_data)
+  with open('public/data.json', 'w') as f:
+    json.dump(data, f)
 
 def commit():
     # Add all changes to the Git staging area
