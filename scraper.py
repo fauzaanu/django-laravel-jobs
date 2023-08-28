@@ -33,8 +33,7 @@ def main():
     else:
         data = [new_data]
     f.seek(0)
-    json.dump(data, f)
-
+    json.dump(data, f, separators=(',', ':'))  # Add separators argument
 
 def commit():
     # Add all changes to the Git staging area
