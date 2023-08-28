@@ -11,33 +11,39 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet" />
 </head>
 
-<body class="bg-gray-900 text-white">
+<body class="bg-white text-black">
   <div class="container mx-auto px-4">
-    <h1 class="text-2xl font-bold my-5">
+    <h1 class="text-2xl font-bold my-5 text-center">
       Job Comparison - Django vs Laravel
     </h1>
-    <div class="py-5">
+    <div class="py-5 italic">
       <p>
-        Data is collected every 24H unless being updated manually while improving the script.
+        Data is collected every Hourly unless being updated manually while improving the script.
       </p>
       <p>
-        Data is from linkedin.com and now a screenshot of the search results are included for more transparency.
+        A screenshot is also included for more transparency.
+      </p>
+
+      <p>
+        Created by <a href="https://fauzaanu.com" class="text-blue-500">Fauzaan Gasim</a>
       </p>
     </div>
-    <div class="container mx-auto px-4 border-2 border-white p-2 m-2 rounded">
-      <h2 class="text-xl font-bold py-2">
-        DJANGO VS LARAVEL
+    <div class="container mx-auto px-4 border-2 border-white p-2 m-2 rounded bg-white text-black shadow p-5">
+      <h2 class="text-xl font-bold py-5 text-center">
+        <span class="bg-green-800 px-1 py-1 rounded text-green-400">DJANGO</span>
+        VS
+        <span class="bg-red-500 px-1 py-1 rounded text-red-300">LARAVEL</span>
       </h2>
       <div id="grid" class="flex gap-1"></div>
 
     </div>
 
-    <table id="data" class="table-auto w-full">
+    <table id="data" class="table-auto w-full shadow p-5">
       <thead>
         <tr>
-          <th class="border px-4 py-2 w-1/4 bg-yellow-500">Time</th>
-          <th class="border px-4 py-2 bg-green-800">Django</th>
-          <th class="border px-4 py-2 bg-red-500">Laravel</th>
+          <th class=" px-4 py-2 w-1/4  text-black">Time</th>
+          <th class=" px-4 py-2  text-green-800">Django</th>
+          <th class=" px-4 py-2  text-red-500">Laravel</th>
         </tr>
       </thead>
       <tbody></tbody>

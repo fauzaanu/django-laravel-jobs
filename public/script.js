@@ -9,15 +9,15 @@ fetch("data.json")
       let tr = document.createElement("tr");
       let djangoImg =
         item.imgs && item.imgs.DJANGO_URL
-          ? `<img src="imgs/${item.imgs.DJANGO_URL}.png" class="w-full" />`
+          ? `<img src="imgs/${item.imgs.DJANGO_URL}.png" class="w-full border-2 border-green-800 rounded" />`
           : "";
       let laravelImg =
         item.imgs && item.imgs.LARAVEL_URL
-          ? `<img src="imgs/${item.imgs.LARAVEL_URL}.png" class="w-full" />`
+          ? `<img src="imgs/${item.imgs.LARAVEL_URL}.png" class="w-full border-2 border-red-500 rounded" />`
           : "";
       tr.innerHTML = `
-                <td class="border px-4 py-2 text-xs">${item.date}</td>
-                <td class="border px-4 py-2">
+                <td class=" px-4 py-2 text-xs">${item.date}</td>
+                <td class=" px-4 py-2">
                   <a href="imgs/${
                     item.imgs ? item.imgs.DJANGO_URL : ""
                   }.png" target="_blank">
@@ -25,7 +25,7 @@ fetch("data.json")
                     ${djangoImg}
                   </a>
                 </td>
-                <td class="border px-4 py-2">
+                <td class=" px-4 py-2">
                   <a href="imgs/${
                     item.imgs ? item.imgs.LARAVEL_URL : ""
                   }.png" target="_blank">
