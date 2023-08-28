@@ -2,7 +2,10 @@ fetch("data.json")
   .then((response) => response.json())
   .then((data) => {
     let tbody = document.querySelector("#data tbody");
+    let grid = document.querySelector("#grid");
+
     data.forEach((item) => {
+      // Process data for table
       let tr = document.createElement("tr");
       let djangoImg =
         item.imgs && item.imgs.DJANGO_URL
@@ -32,5 +35,13 @@ fetch("data.json")
                 </td>
             `;
       tbody.appendChild(tr);
+
+      // Process data for grid
+      let div = document.createElement("div");
+      div.className =
+        item.jobs.DJANGO_URL >= item.jobs.LARAVEL_URL
+          ? "w-4 h-4 bg-green-800"
+          : "w-4 h-4 bg-red-500";
+      grid.appendChild(div);
     });
   });
