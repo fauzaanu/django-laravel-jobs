@@ -2,7 +2,10 @@ fetch("data.json")
   .then((response) => response.json())
   .then((data) => {
     let tbody = document.querySelector("#data tbody");
+    let grid = document.querySelector("#grid");
+
     data.forEach((item) => {
+      // Process data for table
       let tr = document.createElement("tr");
       let djangoImg =
         item.imgs && item.imgs.DJANGO_URL
@@ -16,7 +19,7 @@ fetch("data.json")
                 <td class="border px-4 py-2 text-xs">${item.date}</td>
                 <td class="border px-4 py-2">
                   <a href="imgs/${
-                    item.imgs && item.imgs.DJANGO_URL
+                    item.imgs ? item.imgs.DJANGO_URL : ""
                   }.png" target="_blank">
                     ${item.jobs.DJANGO_URL}
                     ${djangoImg}
@@ -24,7 +27,7 @@ fetch("data.json")
                 </td>
                 <td class="border px-4 py-2">
                   <a href="imgs/${
-                    item.imgs && item.imgs.LARAVEL_URL
+                    item.imgs ? item.imgs.LARAVEL_URL : ""
                   }.png" target="_blank">
                     ${item.jobs.LARAVEL_URL}
                     ${laravelImg}
@@ -32,23 +35,13 @@ fetch("data.json")
                 </td>
             `;
       tbody.appendChild(tr);
-    });
-  });
 
-fetch("data.json")
-  .then((response) => response.json())
-  .then((data) => {
-    let grid = document.querySelector("#grid");
-    console.log("Grid:", grid); // Check if grid is selected correctly
-    console.log("Data:", data); // Check the data
-    data.forEach((item) => {
+      // Process data for grid
       let div = document.createElement("div");
-      // If 'DJANGO_URL' value is higher, assign bg-green-800, otherwise, assign bg-red-500
       div.className =
         item.jobs.DJANGO_URL >= item.jobs.LARAVEL_URL
           ? "w-4 h-4 bg-green-800"
           : "w-4 h-4 bg-red-500";
-      console.log("Div:", div); // Check each div
       grid.appendChild(div);
     });
   });
