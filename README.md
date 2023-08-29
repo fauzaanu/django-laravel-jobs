@@ -16,3 +16,9 @@ playwright
 - [x] Add a github like graph to show the trend
 
 - [x] Add images of linkedin for transparency
+
+- [ ] Add all the regions : one data file but multiple html files
+
+## Credits
+
+Countries list by [kalinchernev](https://gist.github.com/kalinchernev/486393efcca01623b18d)
