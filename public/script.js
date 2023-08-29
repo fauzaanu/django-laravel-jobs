@@ -4,15 +4,14 @@ fetch("data.json")
     let tbody = document.querySelector("#data tbody");
     let grid = document.querySelector("#grid");
 
-    // Capture the name of the current HTML file (e.g., 'index', 'the-caribbean', etc.)
-    const htmlFileName = window.location.pathname
+    let pathArray = window.location.pathname
       .split("/")
-      .pop()
-      .split(".")[0];
-    const region =
+      .filter((item) => item != "");
+
+    let htmlFileName = pathArray.length > 0 ? pathArray.pop() : "index";
+    let region =
       htmlFileName == "index" ? "Worldwide" : htmlFileName.replace(/-/g, " ");
 
-    // Filter the data for the current region; if region is 'Worldwide', retain all data
     const filteredData =
       region == "Worldwide"
         ? data

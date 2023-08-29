@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Job Comparison - Django vs Laravel</title>
+    <meta
+      name="description"
+      content="A comparison of job postings for Django and Laravel."
+    />
+    <meta
+      name="keywords"
+      content="Job Comparison, Django, Laravel, Programming Jobs"
+    />
+    <meta name="author" content="Fauzaan Gasim" />
+    <meta property="og:title" content="Job Comparison - Django vs Laravel" />
+    <meta
+      property="og:description"
+      content="A comparison of job postings for Django and Laravel."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-white text-black">
+    <div class="container mx-auto px-4">
+      <h1 class="text-2xl font-bold my-5 text-center">
+        Job Comparison - Django vs Laravel
+      </h1>
+      <div class="py-5 italic">
+        <p>
+          Data is collected every Hour unless being updated manually while
+          improving the script.
+        </p>
+        <p>A screenshot is also included for more transparency.</p>
+
+        <p>
+          Created by
+          <a href="https://fauzaanu.com" class="text-blue-500">Fauzaan Gasim</a>
+        </p>
+      </div>
+      <div
+        class="container mx-auto px-4 border-2 border-white p-2 m-2 rounded bg-white text-black shadow p-5"
+      >
+        <h2 class="text-xl font-bold py-5 text-center">
+          <span class="px-1 py-1 rounded text-green-800">DJANGO</span>
+          VS
+          <span class="px-1 py-1 rounded text-red-500">LARAVEL</span>
+        </h2>
+        <div id="grid" class="flex gap-1"></div>
+      </div>
+
+      <table id="data" class="table-auto w-full shadow p-5">
+        <thead>
+          <tr>
+            <th class="px-4 py-2 w-1/4 text-black">Time</th>
+            <th class="px-4 py-2 text-green-800">Django</th>
+            <th class="px-4 py-2 text-red-500">Laravel</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
