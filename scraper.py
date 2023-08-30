@@ -10,10 +10,8 @@ import uuid
 REGIONS = ['Asia', 'Europe', 'North America', 'South America', 'Africa', 'The Caribbean', 'Central America', 'Oceania', 'Worldwide']
 
 def main():
-
     with sync_playwright() as p:
         for region in REGIONS:
-            # replace space with "-"
             region_key = region.replace(' ', '-')
             new_data = {'region': region_key, 'date': datetime.datetime.now().isoformat(), 'jobs': {}, 'imgs': {}}
 
@@ -27,7 +25,9 @@ def main():
                 html_content = page.content()
                 match = re.search(r'Past 24 hours ((\d+,?\d*))', html_content)
                 job_count = int(match.group(1).replace(',', '')) if match else 0
-                new_data['jobs'][key] = job_count
+
+                if job_count != 0:  # Only add if job_count is not 0
+                    new_data['jobs'][key] = job_count
 
                 img_key = str(uuid.uuid4())
                 page.screenshot(path=f'public/imgs/{img_key}.png')
@@ -45,6 +45,7 @@ def main():
 
             with open('public/data.json', 'w') as f:
                 json.dump(data, f)
+
 
 
 def commit():
